@@ -1,3 +1,4 @@
 import "./style.css";
-
-console.log(1231);
+import { View } from "./view/view";
+const view = new View();
+console.log(view);
