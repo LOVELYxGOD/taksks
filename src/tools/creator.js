@@ -15,8 +15,13 @@ export class Creator {
   }
   createTag() {
     this.element = document.createElement(this.params.tagName);
+    this.setText();
   }
   getElement() {
     return this.element;
+  }
+  setText() {
+    console.log(this.params.text);
+    this.element.innerText = this.params.text;
   }
 }
