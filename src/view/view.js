@@ -8,6 +8,7 @@ export class View {
       classList: [],
       atr: {
         id: 3,
+        "data-test": "data",
       },
       text: "Hello world!",
     });

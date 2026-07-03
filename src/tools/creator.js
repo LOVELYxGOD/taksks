@@ -16,12 +16,17 @@ export class Creator {
   createTag() {
     this.element = document.createElement(this.params.tagName);
     this.setText();
+    this.setAtribut();
   }
   getElement() {
     return this.element;
   }
   setText() {
-    console.log(this.params.text);
     this.element.innerText = this.params.text;
+  }
+  setAtribut() {
+    for (const key in this.params.atr) {
+      console.log(key, this.params.atr[key]);
+    }
   }
 }
