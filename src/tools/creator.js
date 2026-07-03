@@ -14,6 +14,9 @@ export class Creator {
     this.createTag();
   }
   createTag() {
-    console.log(this.params);
+    this.element = document.createElement(this.params.tagName);
+  }
+  getElement() {
+    return this.element;
   }
 }

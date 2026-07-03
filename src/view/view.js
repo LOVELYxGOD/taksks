@@ -11,5 +11,6 @@ export class View {
       },
       text: "Hello world!",
     });
+    this.appContainer.append(this.testElement.getElement());
   }
 }
