@@ -5,12 +5,12 @@ export class View {
     this.appContainer = document.querySelector("#app");
     this.testElement = new Creator({
       tagName: "div",
-      classList: [],
       atr: {
         id: 3,
         "data-test": "data",
       },
       text: "Hello world!",
+      classList: ["w-2xs", "bg-orange-100", "h-100px"],
     });
     this.appContainer.append(this.testElement.getElement());
   }

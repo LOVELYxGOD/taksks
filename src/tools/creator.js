@@ -17,6 +17,7 @@ export class Creator {
     this.element = document.createElement(this.params.tagName);
     this.setText();
     this.setAtribut();
+    this.setClass();
   }
   getElement() {
     return this.element;
@@ -26,7 +27,10 @@ export class Creator {
   }
   setAtribut() {
     for (const key in this.params.atr) {
-      console.log(key, this.params.atr[key]);
+      this.element.setAttribute(key, this.params.atr[key]);
     }
+  }
+  setClass() {
+    this.element.classList.add(...this.params.classList);
   }
 }
