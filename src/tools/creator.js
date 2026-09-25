@@ -23,7 +23,9 @@ export class Creator {
     return this.element;
   }
   setText() {
-    this.element.innerText = this.params.text;
+    if (this.params && this.params.text) {
+      this.element.innerText = this.params.text;
+    }
   }
   setAtribut() {
     for (const key in this.params.atr) {
