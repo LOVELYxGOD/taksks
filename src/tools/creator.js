@@ -33,6 +33,7 @@ export class Creator {
     }
   }
   setClass() {
-    this.element.classList.add(...this.params.classList);
+    if (this.params && this.params.classList)
+      this.element.classList.add(...this.params.classList);
   }
 }

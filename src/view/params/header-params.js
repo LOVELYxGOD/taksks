@@ -5,7 +5,7 @@ export const headerParams = {
 export const nightButtonParams = {
   tagName: "button",
   text: "",
-  classList: [],
+  classList: ["overflow-hidden", "w-12", "h-12", "bg-red-900"],
 };
 
 export const logoParams = {
@@ -29,4 +29,31 @@ export const logoTitleParams = {
   tagName: "h1",
   classList: ["text-3xl"],
   text: "Noted",
+};
+
+export const searchInputParams = {
+  tagName: "input",
+  atr: {
+    type: "search",
+  },
+};
+
+export const nightButtonContainerParams = {
+  tagName: "div",
+  classList: [],
+};
+
+export const lightParams = {
+  tagName: "img",
+  atr: {
+    src: "/sun-svgrepo-com.svg",
+  },
+  classList: [],
+};
+export const darkParams = {
+  tagName: "img",
+  atr: {
+    src: "/moon-svgrepo-com.svg",
+  },
+  classList: [],
 };

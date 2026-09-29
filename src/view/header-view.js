@@ -1,9 +1,13 @@
 import { Creator } from "../tools/creator";
 import {
+  darkParams,
   headerParams,
+  lightParams,
   logoParams,
   logoTitleParams,
+  nightButtonContainerParams,
   nightButtonParams,
+  searchInputParams,
   wraperLogoParams,
 } from "./params/header-params";
 
@@ -11,21 +15,33 @@ export class HeaderView {
   constructor() {
     this.headerElement = null;
     this.nightButton = null;
-    this.logoElement = null;
+    this.searchInput = null;
     this.build();
   }
+
   build() {
     this.headerElement = new Creator(headerParams).getElement();
 
     const logoElement = new Creator(wraperLogoParams).getElement();
     const logoImg = new Creator(logoParams).getElement();
     const logoTitle = new Creator(logoTitleParams).getElement();
-    console.log(logoElement, logoImg, logoTitle);
 
     logoElement.append(logoImg, logoTitle);
 
+    const searchInput = new Creator(searchInputParams).getElement();
+
     this.nightButton = new Creator(nightButtonParams).getElement();
 
-    this.headerElement.append(logoElement);
+    const nightButtonContainer = new Creator(
+      nightButtonContainerParams,
+    ).getElement();
+    const lightImg = new Creator(lightParams).getElement();
+    const darkImg = new Creator(darkParams).getElement();
+
+    nightButtonContainer.append(lightImg, darkImg);
+
+    this.nightButton.append(nightButtonContainer);
+
+    this.headerElement.append(logoElement, searchInput, this.nightButton);
   }
 }
