@@ -8,7 +8,7 @@ import {
   nightButtonContainerParams,
   nightButtonParams,
   searchInputParams,
-  wraperLogoParams,
+  wrapperLogoParams,
 } from "./params/header-params";
 
 export class HeaderView {
@@ -22,7 +22,7 @@ export class HeaderView {
   build() {
     this.headerElement = new Creator(headerParams).getElement();
 
-    const logoElement = new Creator(wraperLogoParams).getElement();
+    const logoElement = new Creator(wrapperLogoParams).getElement();
     const logoImg = new Creator(logoParams).getElement();
     const logoTitle = new Creator(logoTitleParams).getElement();
 

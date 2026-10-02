@@ -6,4 +6,8 @@ export class View {
     this.header = new HeaderView();
     this.appContainer.append(this.header.headerElement);
   }
+  setDarkMode() {
+    const html = document.documentElement;
+    html.classList.toggle("dark");
+  }
 }

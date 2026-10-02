@@ -8,8 +8,8 @@ export class Controller {
     this.setLisener();
   }
   setLisener() {
-    this.view.header.nightButton.addEventListener("click", (event) => {
-      console.log(event);
+    this.view.header.nightButton.addEventListener("click", () => {
+      this.view.setDarkMode();
     });
   }
 }
