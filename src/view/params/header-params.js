@@ -18,7 +18,14 @@ export const headerParams = {
 export const nightButtonParams = {
   tagName: "button",
   text: "",
-  classList: ["w-12", "h-12", "rounded-full"],
+  classList: [
+    "w-8",
+    "h-8",
+    "rounded-xl",
+    "relative",
+    "bg-white",
+    "overflow-hidden",
+  ],
 };
 
 export const logoParams = {
@@ -64,7 +71,15 @@ export const searchInputParams = {
 
 export const nightButtonContainerParams = {
   tagName: "div",
-  classList: ["flex", "items-center", "justify-center"],
+  classList: [
+    "flex",
+    "items-center",
+    "justify-center",
+    "absolute",
+    "inset-y-0",
+    "left-[-27px]",
+    "gap-2",
+  ],
 };
 
 export const lightParams = {

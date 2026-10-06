@@ -9,5 +9,6 @@ export class View {
   setDarkMode() {
     const html = document.documentElement;
     html.classList.toggle("dark");
+    this.header.nightButton.classList.toggle("activeNight");
   }
 }
