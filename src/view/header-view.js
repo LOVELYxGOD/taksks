@@ -5,7 +5,7 @@ import {
   lightParams,
   logoParams,
   logoTitleParams,
-  nightButtonContainerParams,
+  // nightButtonContainerParams,
   nightButtonParams,
   searchInputParams,
   wrapperLogoParams,
@@ -32,15 +32,20 @@ export class HeaderView {
 
     this.nightButton = new Creator(nightButtonParams).getElement();
 
-    const nightButtonContainer = new Creator(
-      nightButtonContainerParams,
-    ).getElement();
+    // const nightButtonContainer = new Creator(
+    //   nightButtonContainerParams,
+    // ).getElement();
     const lightImg = new Creator(lightParams).getElement();
     const darkImg = new Creator(darkParams).getElement();
 
-    nightButtonContainer.append(lightImg, darkImg);
+    // nightButtonContainer.append(lightImg, darkImg);
 
-    this.nightButton.append(nightButtonContainer);
+    // darkImg.classList.add("hidden");
+
+    // this.lightImg = lightImg;
+    // this.darkImg = darkImg;
+
+    this.nightButton.append(lightImg, darkImg);
 
     this.headerElement.append(logoElement, searchInput, this.nightButton);
   }

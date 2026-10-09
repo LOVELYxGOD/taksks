@@ -8,7 +8,11 @@ export class View {
   }
   setDarkMode() {
     const html = document.documentElement;
+
     html.classList.toggle("dark");
-    this.header.nightButton.classList.toggle("activeNight");
+    // this.header.nightButton.classList.toggle("activeNight");
+
+    // this.header.lightImg.classList.toggle("hidden");
+    // this.header.darkImg.classList.toggle("hidden");
   }
 }

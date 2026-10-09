@@ -9,6 +9,7 @@ export class Controller {
   }
   setLisener() {
     this.view.header.nightButton.addEventListener("click", () => {
+      console.log("КНОПКА НАЖАТА");
       this.view.setDarkMode();
     });
   }
