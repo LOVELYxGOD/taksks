@@ -6,11 +6,17 @@ export class Controller {
     this.model = new Model();
     this.view = new View();
     this.setLisener();
+    this.setStartPosition();
   }
   setLisener() {
     this.view.header.nightButton.addEventListener("click", () => {
       this.model.switchTheme();
-      this.view.setDarkMode();
+      this.view.switchDarkMode();
     });
+  }
+  setStartPosition() {
+    if (!this.model.isNightMode) {
+      this.view.setLightMode();
+    }
   }
 }

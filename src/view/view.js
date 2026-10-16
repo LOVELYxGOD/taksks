@@ -6,13 +6,12 @@ export class View {
     this.header = new HeaderView();
     this.appContainer.append(this.header.headerElement);
   }
-  setDarkMode() {
+  switchDarkMode() {
     const html = document.documentElement;
 
     html.classList.toggle("dark");
-    // this.header.nightButton.classList.toggle("activeNight");
-
-    // this.header.lightImg.classList.toggle("hidden");
-    // this.header.darkImg.classList.toggle("hidden");
+  }
+  setLightMode() {
+    document.documentElement.classList.remove("dark");
   }
 }
