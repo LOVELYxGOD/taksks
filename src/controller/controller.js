@@ -13,6 +13,11 @@ export class Controller {
       this.model.switchTheme();
       this.view.switchDarkMode();
     });
+    this.view.main.mainElement.addEventListener("click", (event) => {
+      if (event.target.closest("#addNoteButton")) {
+        console.log("pressed");
+      }
+    });
   }
   setStartPosition() {
     if (!this.model.isNightMode) {
