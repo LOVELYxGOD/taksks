@@ -15,7 +15,7 @@ export class Controller {
     });
     this.view.main.mainElement.addEventListener("click", (event) => {
       if (event.target.closest("#addNoteButton")) {
-        console.log("pressed");
+        this.view.main.addForm();
       }
     });
   }
