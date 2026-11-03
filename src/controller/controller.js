@@ -16,6 +16,15 @@ export class Controller {
     this.view.main.mainElement.addEventListener("click", (event) => {
       if (event.target.closest("#addNoteButton")) {
         this.view.main.addForm();
+        this.view.main.formView.formElement.addEventListener(
+          "submit",
+          (event) => {
+            event.preventDefault();
+            console.log(event.target);
+            const formData = new FormData(this.view.main.formView.formElement);
+            console.log(formData);
+          },
+        );
       }
     });
   }

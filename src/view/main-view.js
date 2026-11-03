@@ -7,7 +7,7 @@ export class MainView {
   constructor() {
     this.mainElement = null;
     this.addNoteButton = null;
-    this.formView = new FormView();
+    this.formView = null;
     this.build();
   }
   build() {
@@ -16,6 +16,7 @@ export class MainView {
     this.mainElement.append(this.addNoteButton);
   }
   addForm() {
+    this.formView = new FormView();
     this.mainElement.append(this.formView.formElement);
   }
 }

@@ -9,7 +9,7 @@ import {
   headerButtonParams,
   headerContainerParams,
   headerFormIconParams,
-  headerFormtextParams,
+  headerFormTextParams,
   headerParams,
   inputTitleParams,
   NameTitleContainerParams,
@@ -27,8 +27,8 @@ export class FormView {
     this.formElement = new Creator(formParams).getElement();
 
     const formHeader = new Creator(headerParams).getElement();
-    const formTitle = new Creator(headerFormIconParams).getElement();
-    const formImg = new Creator(headerFormtextParams).getElement();
+    const formImg = new Creator(headerFormIconParams).getElement();
+    const formTitle = new Creator(headerFormTextParams).getElement();
     const formTitleContainer = new Creator(headerContainerParams).getElement();
     const formButton = new Creator(headerButtonParams).getElement();
     formTitleContainer.append(formImg, formTitle);
