@@ -20,9 +20,7 @@ export class Controller {
           "submit",
           (event) => {
             event.preventDefault();
-            console.log(event.target);
-            const formData = new FormData(this.view.main.formView.formElement);
-            console.log(formData);
+            this.model.getFormData(event.target);
           },
         );
       }

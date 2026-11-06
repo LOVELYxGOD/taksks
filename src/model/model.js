@@ -2,8 +2,6 @@ export class Model {
   constructor() {
     this.isNightMode = true;
     this.getNightMode();
-    // здесь вызвать метод который будет делать запо=рос в локалку и выяснять есть ли там isnightmode
-    // если isnightmode есть в локалки - вернуть значение если нету в локалки установить текущее значение из модели
   }
 
   setLocalStorage(key, value) {
@@ -35,5 +33,10 @@ export class Model {
     } else {
       this.setLocalStorage("isNightMode", this.isNightMode);
     }
+  }
+
+  getFormData(formElement) {
+    const formData = new FormData(formElement);
+    console.log(formData.get("title"), formData.get("text"));
   }
 }
