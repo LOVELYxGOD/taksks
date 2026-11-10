@@ -20,7 +20,7 @@ export class Controller {
           "submit",
           (event) => {
             event.preventDefault();
-            this.model.getFormData(event.target);
+            this.model.prepareFormData(event.target);
           },
         );
       }

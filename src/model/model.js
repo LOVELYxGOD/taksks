@@ -2,6 +2,8 @@ export class Model {
   constructor() {
     this.isNightMode = true;
     this.getNightMode();
+    this.notes = this.getData() || [];
+    console.log(this.notes);
   }
 
   setLocalStorage(key, value) {
@@ -35,8 +37,36 @@ export class Model {
     }
   }
 
-  getFormData(formElement) {
+  prepareFormData(formElement) {
     const formData = new FormData(formElement);
-    console.log(formData.get("title"), formData.get("text"));
+
+    const event = new Date();
+    const options = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+    };
+    const data = {
+      date: event.toLocaleString("ru-RU", options),
+      title: formData.get("title"),
+      text: formData.get("text"),
+    };
+    console.log(data);
+
+    this.addNote(data);
+  }
+
+  addNote(data) {
+    this.notes.push(data);
+    this.setData(this.notes);
+  }
+
+  setData(data) {
+    this.setLocalStorage("notes", JSON.stringify(data)); // эта строка не моя
+  }
+  getData() {
+    return JSON.parse(this.getLocalStorage("notes"));
   }
 }
