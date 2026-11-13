@@ -20,3 +20,12 @@ export const addNoteParams = {
     id: "addNoteButton",
   },
 };
+
+export const notesElementParams = {
+  tagName: "ul",
+  classList: [],
+};
+export const liParams = {
+  tagName: "li",
+  classList: [],
+};

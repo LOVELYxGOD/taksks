@@ -4,7 +4,7 @@ import { View } from "../view/view";
 export class Controller {
   constructor() {
     this.model = new Model();
-    this.view = new View();
+    this.view = new View(this.model.notes);
     this.setLisener();
     this.setStartPosition();
   }
