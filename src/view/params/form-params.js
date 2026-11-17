@@ -147,3 +147,15 @@ export const createParams = {
     "hover:bg-blue-700",
   ],
 };
+
+export const formCheckBoxParams = {
+  tagName: "input",
+  atr: {
+    type: "checkbox",
+    name: "checkBox",
+  },
+};
+export const topContainerParams = {
+  tagName: "div",
+  classList: ["flex", "gap-3"],
+};

@@ -52,6 +52,7 @@ export class Model {
       date: event.toLocaleString("ru-RU", options),
       title: formData.get("title"),
       text: formData.get("text"),
+      checkbox: formData.get("checkBox"),
     };
     console.log(data);
 

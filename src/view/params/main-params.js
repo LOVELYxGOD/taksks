@@ -29,3 +29,28 @@ export const liParams = {
   tagName: "li",
   classList: [],
 };
+
+export const nameParams = {
+  tagName: "p",
+  classList: [],
+};
+
+export const flagsParams = {
+  tagName: "p",
+  classList: [],
+};
+
+export const textParams = {
+  tagName: "li",
+  classList: [],
+};
+
+export const containerUppestParams = {
+  tagName: "li",
+  classList: [],
+};
+
+export const containerlowerParams = {
+  tagName: "li",
+  classList: [],
+};

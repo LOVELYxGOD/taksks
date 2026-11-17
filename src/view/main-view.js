@@ -2,6 +2,7 @@ import { Creator } from "../tools/creator";
 import {
   addNoteParams,
   liParams,
+  nameParams,
   notesElementParams,
 } from "./params/main-params";
 import { mainParams } from "./params/main-params";
@@ -37,8 +38,13 @@ class NotesListView {
     this.notesElement = new Creator(notesElementParams).getElement();
     this.notesList.forEach((element) => {
       const li = new Creator(liParams).getElement();
-      li.innerHTML = element.title;
-      this.notesElement.append(li);
+
+      const name = new Creator(nameParams).getElement();
+      // const flags = new Creator(flagsParams).getElement();
+      // const text = new Creator().getElement();
+      // const containerUppest = new Creator().getElement();
+      // const containerlower = new Creator().getElement();
+      this.notesElement.append(li, name);
       console.log(element);
     });
   }
