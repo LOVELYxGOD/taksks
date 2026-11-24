@@ -14,7 +14,7 @@ import {
   headerFormTextParams,
   headerParams,
   inputTitleParams,
-  lableParams,
+  labelParams,
   NameTitleContainerParams,
   textAreaParams,
   titleBodyParams,
@@ -43,12 +43,6 @@ export class FormView {
     const formTitleHeading = new Creator(titleBodyParams).getElement();
     const formInputName = new Creator(inputTitleParams).getElement();
 
-    const formCheckBox = new Creator(formCheckBoxParams).getElement();
-    const fakeCheckBox = new Creator(fakeCheckBoxParams).getElement();
-    const lable = new Creator(lableParams).getElement();
-    lable.append(formCheckBox, fakeCheckBox);
-    console.log(lable);
-
     const formTitleTextArea = new Creator(textAreaParams).getElement();
     const forInputContent = new Creator(NameTitleContainerParams).getElement();
     const formNameTitleContainer = new Creator(
@@ -59,8 +53,14 @@ export class FormView {
       contentTitleContainerParams,
     ).getElement();
 
+    const formCheckBox = new Creator(formCheckBoxParams).getElement();
+    const fakeCheckBox = new Creator(fakeCheckBoxParams).getElement();
+    const label = new Creator(labelParams).getElement();
+    label.append(formCheckBox, fakeCheckBox);
+    topContainer.append(formNameTitleContainer, label);
+
     formNameTitleContainer.append(formTitleHeading, formInputName);
-    topContainer.append(formNameTitleContainer, lable);
+    topContainer.append(formNameTitleContainer, label);
     formContentTitleContainer.append(formTitleTextArea, forInputContent);
     formBody.append(topContainer, formContentTitleContainer);
     this.formElement.append(formBody);

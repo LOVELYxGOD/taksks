@@ -111,7 +111,7 @@ export const inputTitleParams = {
     "outline-none",
     "focus:border-violet-500",
   ],
-  attr: {
+  atr: {
     name: "title",
     placeholder: "Give it a name...",
   },
@@ -136,7 +136,7 @@ export const textAreaParams = {
     "outline-none",
     "focus:border-violet-500",
   ],
-  attr: {
+  atr: {
     name: "text",
     placeholder: "Write anything...",
   },
@@ -196,16 +196,17 @@ export const formCheckBoxParams = {
   classList: ["real-checkbox"],
 };
 
-export const topContainerParams = {
-  tagName: "div",
-  classList: ["flex", "gap-8"],
-};
-export const lableParams = {
-  tagname: "label",
-  Classlist: [],
+export const labelParams = {
+  tagName: "label",
+  classList: ["wrapper-checkbox"],
 };
 
 export const fakeCheckBoxParams = {
-  tagname: "div",
-  Classlist: ["fake-checkbox"],
+  tagName: "div",
+  classList: ["fake-checkbox"],
+};
+
+export const topContainerParams = {
+  tagName: "div",
+  classList: ["flex", "gap-8"],
 };

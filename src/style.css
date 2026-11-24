@@ -1,8 +1,26 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-.fakeCheckBox {
-  width: 20px;
-  height: 20px;
-  border: solid green;
+.fake-checkbox {
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+  border-radius: 12px;
+}
+.real-checkbox:checked + .fake-checkbox {
+  background-image: url(../public/heart-svgrepo-com.svg);
+  background-size: cover;
+}
+.real-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.wrapper-checkbox {
+  width: 80px;
+  height: 80px;
+  align-self: flex-end;
 }
