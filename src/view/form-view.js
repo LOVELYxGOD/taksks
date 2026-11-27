@@ -15,6 +15,7 @@ import {
   headerParams,
   inputTitleParams,
   labelParams,
+  markerParams,
   NameTitleContainerParams,
   textAreaParams,
   titleBodyParams,
@@ -55,7 +56,9 @@ export class FormView {
 
     const formCheckBox = new Creator(formCheckBoxParams).getElement();
     const fakeCheckBox = new Creator(fakeCheckBoxParams).getElement();
+    const marker = new Creator(markerParams).getElement();
     const label = new Creator(labelParams).getElement();
+    fakeCheckBox.append(marker);
     label.append(formCheckBox, fakeCheckBox);
     topContainer.append(formNameTitleContainer, label);
 

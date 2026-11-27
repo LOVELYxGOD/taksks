@@ -18,6 +18,7 @@ export class Creator {
     this.setText();
     this.setAtribut();
     this.setClass();
+    this.setHTML();
   }
   getElement() {
     return this.element;
@@ -35,5 +36,9 @@ export class Creator {
   setClass() {
     if (this.params && this.params.classList)
       this.element.classList.add(...this.params.classList);
+  }
+  setHTML() {
+    if (this.params && this.params.layout)
+      this.element.innerHTML = this.params.layout;
   }
 }

@@ -2,15 +2,15 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .fake-checkbox {
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: 1px solid green;
   border-radius: 12px;
 }
-.real-checkbox:checked + .fake-checkbox {
-  background-image: url(../public/heart-svgrepo-com.svg);
-  background-size: cover;
-}
+
 .real-checkbox {
   position: absolute;
   top: 0;
@@ -23,4 +23,37 @@
   width: 80px;
   height: 80px;
   align-self: flex-end;
+}
+
+.fake-checkbox span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.fake-checkbox svg {
+  width: 100%;
+  height: 100%;
+  /* stroke: #000000; */
+}
+.real-checkbox:checked + .fake-checkbox span {
+  animation-name: myAnimation;
+  animation-duration: 0.5s;
+}
+@keyframes myAnimation {
+  50% {
+    stroke: #7442c8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  75% {
+    stroke: #7442c8;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    stroke: #7442c8;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
